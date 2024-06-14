@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: pink;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.heart, .cat {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: float 15s infinite ease-in-out;
+    z-index: 1;
+}
+
+.heart {
+    background-color: red;
+    transform: rotate(-45deg);
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -25px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 25px;
+}
+
+.cat {
+    background-color: transparent;
+    background-size: cover;
+    transform: none; /* Remove the rotate transformation */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 3px solid #007bff;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 90%;
+    }
+    .photo {
+        width: 150px;
+        height: 150px;
+    }
+}
