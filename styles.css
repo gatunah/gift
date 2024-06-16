@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: #6d1459;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@ body {
 
 .container {
     text-align: center;
-    background-color: #fff;
+    background-color: #ffc4f0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -113,3 +113,15 @@ body {
         height: 150px;
     }
 }
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0;
+    text-align: center;
+}
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bd-violet-bg);
+    --bs-tooltip-color: var(--bs-white);
+  }
